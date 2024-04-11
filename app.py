@@ -1,16 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from markupsafe import escape
 
-# app = Flask(__name__)
-#
+app = Flask(__name__)
+
 # @app.route('/user/<name>')
 # def user_page(name):
 #     return f'user:{escape(name)}'
-#
-# @app.route('/')
-# def hello():
-#     return 'hello'
-#
+
+@app.route('/')
+def hello():
+    return 'hello'
+
 # @app.route('/test')
 # def test_url_for():
 #     print(url_for('hello'))
@@ -18,6 +18,7 @@ from markupsafe import escape
 #     print(url_for('user_page', name='lici'))
 #     print(url_for('test_url_for'))
 #     print(url_for('test_url_for', num=2))
+#     print(url_for('static', filename='favicon.ico'))
 #     return 'Test page'
 
 
